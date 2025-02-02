@@ -9,7 +9,7 @@ function agregarAmigo() {
       alert("Por favor, ingresa un nombre.");
       return;
     }
-  
+    
     amigos.push(nombre);
   
     // Obtener la lista y actualizar su contenido
@@ -25,4 +25,22 @@ function agregarAmigo() {
     listaActualizada.innerHTML = listaHTML;
   
     return amigos;
+  }
+
+  function sorteo(){
+    // Obtenemos el numero total de amigos
+    let numeroAmigos = amigos.length;
+    if (numeroAmigos > 0 ) { // Validamos si la lista esta vacia 
+        let numeroRandom = Math.floor(Math.random()*numeroAmigos);
+        let resultadoAmigo = amigos[numeroRandom];
+        let mostrandoResultado = document.getElementById('resultado')
+        mostrandoResultado.innerHTML = resultadoAmigo;
+    } else{
+        alert('Tu lista de amigos esta vacia, intenta agregar algunos nombres!')
+    }
+    
+
+  }
+  function sortearAmigo() {
+    sorteo();
   }
