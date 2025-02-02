@@ -11,7 +11,7 @@ function agregarAmigo() {
     }
 
     amigos.push(nombre);
-  
+    document.getElementById("amigo").value = "";
     // Obtener la lista y actualizar su contenido
     let listaActualizada = document.getElementById('listaAmigos');
   
