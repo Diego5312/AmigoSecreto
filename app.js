@@ -9,7 +9,7 @@ function agregarAmigo() {
       alert("Por favor, ingresa un nombre.");
       return;
     }
-    
+
     amigos.push(nombre);
   
     // Obtener la lista y actualizar su contenido
@@ -31,6 +31,7 @@ function agregarAmigo() {
     // Obtenemos el numero total de amigos
     let numeroAmigos = amigos.length;
     if (numeroAmigos > 0 ) { // Validamos si la lista esta vacia 
+        // Generamos un numero random en base al numero total de amigos agregados
         let numeroRandom = Math.floor(Math.random()*numeroAmigos);
         let resultadoAmigo = amigos[numeroRandom];
         let mostrandoResultado = document.getElementById('resultado')
